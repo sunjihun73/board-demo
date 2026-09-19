@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'war'
+    id 'org.springframework.boot' version '3.3.5'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+description = 'PM 교육용 레거시 스타일 사내 업무 게시판 (Spring Boot + JSP + MyBatis + PostgreSQL)'
+
+java {
+    toolchain {
+        // JDK 21 (검증 기준 21.0.12)
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+ext {
+    mybatisSpringBootVersion = '3.0.3'
+    jstlApiVersion = '3.0.0'
+    jstlImplVersion = '3.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // JSP 렌더링 : war 패키징 + Jasper
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation "jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:${jstlApiVersion}"
+    implementation "org.glassfish.web:jakarta.servlet.jsp.jstl:${jstlImplVersion}"
+
+    // MyBatis
+    implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:${mybatisSpringBootVersion}"
+
+    // DB : PostgreSQL (로컬 Docker 컨테이너)
+    runtimeOnly 'org.postgresql:postgresql'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('bootWar') {
+    archiveFileName = 'board-demo.war'
+}
+
+tasks.named('war') {
+    enabled = false
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+    }
+}

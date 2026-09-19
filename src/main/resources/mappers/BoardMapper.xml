@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.board.mapper.BoardMapper">
+
+    <select id="selectList" resultType="Board">
+        SELECT id, title, writer, view_count, created_at
+          FROM board
+         ORDER BY id DESC
+         LIMIT #{limit} OFFSET #{offset}
+    </select>
+
+    <select id="selectCount" resultType="int">
+        SELECT COUNT(*)
+          FROM board
+    </select>
+
+    <select id="selectById" resultType="Board">
+        SELECT id, title, content, writer, view_count, created_at
+          FROM board
+         WHERE id = #{id}
+    </select>
+
+    <insert id="insert" parameterType="Board" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+        INSERT INTO board (title, content, writer, view_count, created_at)
+        VALUES (#{title}, #{content}, #{writer}, 0, CURRENT_TIMESTAMP)
+    </insert>
+
+    <update id="increaseViewCount">
+        UPDATE board
+           SET view_count = view_count + 1
+         WHERE id = #{id}
+    </update>
+
+    <select id="selectByWriterLegacy" resultType="Board">
+        SELECT id, title, writer, view_count, created_at
+          FROM board
+         WHERE writer = '${writer}'
+         ORDER BY id DESC
+    </select>
+
+</mapper>

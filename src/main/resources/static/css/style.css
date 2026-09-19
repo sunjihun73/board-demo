@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+
+body {
+    font-family: "Malgun Gothic", "맑은 고딕", AppleGothic, sans-serif;
+    font-size: 14px;
+    color: #222;
+    background: #f5f6f8;
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px 0 60px;
+}
+
+.topbar {
+    background: #2c3e50;
+    color: #fff;
+    padding: 12px 0;
+}
+
+.topbar .inner {
+    width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topbar a { color: #dfe6e9; text-decoration: none; }
+.topbar a:hover { text-decoration: underline; }
+
+h2 { margin: 24px 0 12px; font-size: 20px; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+th, td {
+    border: 1px solid #d6dae0;
+    padding: 8px 10px;
+    text-align: center;
+}
+
+th { background: #eef1f5; }
+td.subject { text-align: left; }
+td.subject a { color: #1a4f8b; text-decoration: none; }
+td.subject a:hover { text-decoration: underline; }
+
+.paging { margin: 16px 0; text-align: center; }
+.paging a, .paging strong {
+    display: inline-block;
+    min-width: 28px;
+    padding: 5px 8px;
+    margin: 0 2px;
+    border: 1px solid #c8cdd4;
+    background: #fff;
+    text-decoration: none;
+    color: #333;
+}
+.paging strong { background: #2c3e50; color: #fff; border-color: #2c3e50; }
+
+.btn-area { margin: 12px 0; text-align: right; }
+
+.btn, button, input[type=submit] {
+    display: inline-block;
+    padding: 7px 16px;
+    border: 1px solid #2c3e50;
+    background: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn.gray { background: #fff; color: #2c3e50; }
+
+input[type=text], input[type=password], textarea, select {
+    padding: 6px 8px;
+    border: 1px solid #c8cdd4;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.view-table td.content {
+    text-align: left;
+    height: 220px;
+    vertical-align: top;
+    line-height: 1.6;
+}
+
+.login-box {
+    width: 340px;
+    margin: 100px auto;
+    background: #fff;
+    border: 1px solid #d6dae0;
+    padding: 28px;
+}
+.login-box h2 { margin-top: 0; text-align: center; }
+.login-box p { margin: 10px 0; }
+.login-box input[type=text], .login-box input[type=password] { width: 100%; }
+.login-box button { width: 100%; margin-top: 12px; }
+.error { color: #c0392b; margin: 10px 0; }
+.guide { color: #7a8390; font-size: 12px; margin-top: 14px; text-align: center; }
+.empty { padding: 30px; text-align: center; color: #7a8390; }
+.legacy-box { margin-top: 24px; padding: 14px; background: #fff; border: 1px solid #d6dae0; }

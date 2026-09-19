@@ -1,0 +1,37 @@
+-- 교육용 예제 데이터 (총 35건, 페이지당 10건 기준 4페이지)
+
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('사내 업무 게시판 시스템 오픈 안내', '사내 업무 게시판 시스템을 오픈합니다. 공지사항과 업무 요청은 본 게시판을 이용해 주시기 바랍니다.', '김PM', 0, TIMESTAMP '2026-07-02 09:00:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('2026년 상반기 프로젝트 일정 공유', '상반기 주요 마일스톤과 검수 일정을 공유합니다. 각 파트 담당자는 일정 확인 후 회신 바랍니다.', '김PM', 7, TIMESTAMP '2026-07-03 10:13:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('SI-DEMO-01 프로젝트 착수 보고', '프로젝트 착수 보고가 완료되었습니다. 요구사항 정의서 초안은 금주 내 공유 예정입니다.', '정기획', 14, TIMESTAMP '2026-07-04 11:26:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('요구사항 정의서 v1.0 검토 요청', '요구사항 정의서 초안을 검토 요청드립니다. 의견은 다음 주 화요일까지 회신 부탁드립니다.', '정기획', 21, TIMESTAMP '2026-07-05 12:39:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('화면 설계서 작성 가이드', '화면 설계서는 표준 템플릿을 사용합니다. 항목 누락이 없도록 체크리스트를 참고해 주세요.', '이설계', 28, TIMESTAMP '2026-07-06 13:52:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('DB 테이블 명명 규칙 정리', '테이블과 컬럼 명명 규칙을 정리했습니다. 신규 테이블 생성 시 규칙을 준수해 주세요.', '이설계', 35, TIMESTAMP '2026-07-07 14:05:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('개발 환경 구성 안내', '개발 환경은 JDK 21과 Spring Boot 기준으로 구성합니다. 설치 가이드를 첨부 대신 본문에 정리했습니다.', '박개발', 42, TIMESTAMP '2026-07-08 15:18:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('형상관리 브랜치 전략 공지', '브랜치 전략은 main, develop, feature 구조를 사용합니다. 병합 전 코드 리뷰는 필수입니다.', '박개발', 6, TIMESTAMP '2026-07-09 16:31:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('코드 리뷰 체크리스트 배포', '코드 리뷰 시 확인할 항목을 정리했습니다. 예외 처리와 로그 레벨을 반드시 확인해 주세요.', '박개발', 13, TIMESTAMP '2026-07-10 17:44:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('단위 테스트 작성 기준', '핵심 비즈니스 로직은 단위 테스트를 작성합니다. 테스트 데이터는 고정값으로 관리합니다.', '박개발', 20, TIMESTAMP '2026-07-11 09:57:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('월간 진척 보고 양식 변경', '월간 진척 보고 양식이 변경되었습니다. 이슈와 리스크 항목이 추가되었습니다.', '김PM', 27, TIMESTAMP '2026-07-12 10:10:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('이슈 관리 프로세스 안내', '이슈 등록 후 담당자 지정과 기한 설정을 반드시 진행해 주세요. 미지정 이슈는 매주 점검합니다.', '김PM', 34, TIMESTAMP '2026-07-13 11:23:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('리스크 관리 대장 공유', '식별된 리스크와 대응 방안을 정리했습니다. 신규 리스크는 즉시 등록 바랍니다.', '김PM', 41, TIMESTAMP '2026-07-14 12:36:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('인터페이스 정의서 초안 공유', '타 시스템 연동을 위한 인터페이스 정의서 초안입니다. 항목 검토 후 의견 주세요.', '이설계', 5, TIMESTAMP '2026-07-15 13:49:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('연동 테스트 일정 협의 요청', '연동 테스트 일정 협의가 필요합니다. 가능한 일정을 회신해 주시기 바랍니다.', '이설계', 12, TIMESTAMP '2026-07-16 14:02:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('운영 서버 정기 점검 공지', '이번 주 토요일 02시부터 04시까지 정기 점검이 진행됩니다. 해당 시간 서비스 이용이 제한됩니다.', '최운영', 19, TIMESTAMP '2026-07-17 15:15:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('장애 대응 절차 재공지', '장애 발생 시 보고 체계와 조치 순서를 재공지합니다. 최초 보고는 15분 이내 진행합니다.', '최운영', 26, TIMESTAMP '2026-07-18 16:28:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('배포 요청 절차 변경 안내', '배포 요청은 전일 17시까지 등록해 주세요. 긴급 배포는 별도 승인 절차가 필요합니다.', '최운영', 33, TIMESTAMP '2026-07-19 17:41:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('로그 보관 정책 안내', '애플리케이션 로그는 90일간 보관합니다. 개인정보가 포함되지 않도록 주의해 주세요.', '최운영', 40, TIMESTAMP '2026-07-20 09:54:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('백업 및 복구 훈련 결과', '분기 백업 복구 훈련을 완료했습니다. 복구 소요 시간과 개선 사항을 정리했습니다.', '최운영', 4, TIMESTAMP '2026-07-21 10:07:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('산출물 제출 기한 안내', '단계별 산출물 제출 기한을 안내합니다. 기한 내 제출이 어려운 경우 사전 협의해 주세요.', '정기획', 11, TIMESTAMP '2026-07-22 11:20:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('검수 기준 협의 결과 공유', '고객사와 협의한 검수 기준을 공유합니다. 인수 조건은 요구사항 단위로 관리합니다.', '정기획', 18, TIMESTAMP '2026-07-23 12:33:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('회의록 작성 및 공유 규칙', '회의 종료 후 1일 이내 회의록을 등록합니다. 결정 사항과 조치 항목을 구분해 작성해 주세요.', '정기획', 25, TIMESTAMP '2026-07-24 13:46:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('교육 일정 사전 안내', 'PM 대상 개발 시연 교육을 진행할 예정입니다. 일정 확정 후 별도 공지하겠습니다.', '김PM', 32, TIMESTAMP '2026-07-25 14:59:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('보안 점검 대상 항목 안내', '정기 보안 점검 대상 항목을 안내합니다. 입력값 검증과 출력 처리 항목이 포함됩니다.', '최운영', 39, TIMESTAMP '2026-07-26 15:12:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('계정 관리 정책 변경', '계정 비밀번호 변경 주기가 변경되었습니다. 공용 계정 사용은 금지됩니다.', '최운영', 3, TIMESTAMP '2026-07-27 16:25:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('업무 시스템 조회 권한 신청 방법', '업무 시스템 조회 권한은 담당 부서 승인 후 부여됩니다. 신청 양식을 참고해 주세요.', '정기획', 10, TIMESTAMP '2026-07-28 17:38:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('프로젝트 산출물 폴더 구조 정리', '산출물 폴더 구조를 표준화했습니다. 단계별 폴더에 맞춰 등록해 주세요.', '이설계', 17, TIMESTAMP '2026-07-01 09:51:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('성능 측정 기준 정리', '응답 시간과 동시 사용자 기준을 정리했습니다. 측정 환경은 별도 공유합니다.', '박개발', 24, TIMESTAMP '2026-07-02 10:04:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('공통 코드 관리 방안', '공통 코드는 별도 테이블에서 관리합니다. 코드 추가 시 담당자 확인이 필요합니다.', '이설계', 31, TIMESTAMP '2026-07-03 11:17:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('외부 업체 반입 자산 관리', '외부 반입 자산은 사전 등록 후 반입합니다. 반출 시에도 동일한 절차를 따릅니다.', '최운영', 38, TIMESTAMP '2026-07-04 12:30:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('주간 업무 보고 취합 안내', '주간 업무 보고는 매주 금요일 15시까지 취합합니다. 미제출 시 개별 안내드립니다.', '김PM', 2, TIMESTAMP '2026-07-05 13:43:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('사내 메신저 공지 채널 개설', '공지 전달을 위한 채널을 개설했습니다. 긴급 공지는 채널과 게시판에 동시 등록됩니다.', '정기획', 9, TIMESTAMP '2026-07-06 14:56:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('사용자 매뉴얼 초안 작성 요청', '사용자 매뉴얼 초안 작성을 요청드립니다. 화면 캡처는 최종 화면 확정 후 반영합니다.', '이설계', 16, TIMESTAMP '2026-07-07 15:09:00');
+INSERT INTO board (title, content, writer, view_count, created_at) VALUES ('하반기 시스템 개선 과제 수렴', '하반기 개선 과제를 수렴합니다. 업무별 개선 요청 사항을 등록해 주시기 바랍니다.', '김PM', 23, TIMESTAMP '2026-07-08 16:22:00');

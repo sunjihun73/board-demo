@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: board-demo-postgres
+    environment:
+      POSTGRES_DB: boarddb
+      POSTGRES_USER: boarduser
+      POSTGRES_PASSWORD: boardpw
+      TZ: Asia/Seoul
+    ports:
+      - "5432:5432"
+    volumes:
+      - board-demo-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U boarduser -d boarddb"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  board-demo-pgdata:

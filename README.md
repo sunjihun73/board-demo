@@ -48,7 +48,7 @@ docker compose down -v       # 볼륨까지 삭제 (완전 초기화)
 ```
 
 > 5432 포트를 이미 쓰고 있다면 `docker-compose.yml`의 포트를 `"15432:5432"`로 바꾸고
-> `application.properties`의 JDBC URL도 함께 수정하세요.
+> `application.yml`의 JDBC URL도 함께 수정하세요.
 
 ## 3. 애플리케이션 실행
 
@@ -100,7 +100,7 @@ board-demo
     │   ├── mapper/        BoardMapper (MyBatis 인터페이스)
     │   └── service/       BoardService
     ├── resources
-    │   ├── application.properties
+    │   ├── application.yml
     │   ├── schema.sql / data.sql      초기 스키마·예제 데이터 35건
     │   ├── mappers/BoardMapper.xml    SQL
     │   └── static/css/style.css

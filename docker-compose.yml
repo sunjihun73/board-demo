@@ -1,16 +1,32 @@
+# PM 교육용 게시판 - PostgreSQL
+# 사용법:
+#   docker compose up -d        기동
+#   docker compose ps           상태 확인
+#   docker compose logs -f      로그 확인
+#   docker compose down         중지·삭제 (데이터 유지)
+#   docker compose down -v      볼륨까지 삭제 (완전 초기화)
+
 services:
   postgres:
     image: postgres:16
     container_name: board-demo-postgres
+    restart: unless-stopped
     environment:
       POSTGRES_DB: boarddb
       POSTGRES_USER: boarduser
       POSTGRES_PASSWORD: boardpw
       TZ: Asia/Seoul
+      PGTZ: Asia/Seoul
     ports:
+      # 5432가 이미 사용 중이면 "15432:5432"로 바꾸고
+      # application.yml의 JDBC URL도 함께 수정한다.
       - "5432:5432"
     volumes:
       - board-demo-pgdata:/var/lib/postgresql/data
+    # 시연 중 실행 SQL을 컨테이너 로그로 보여주려면 아래 두 줄의 주석을 해제한다.
+    # (세션 1 호출 흐름 설명, 세션 4 SQL Injection 재현에 유용)
+    # command:
+    #   ["postgres", "-c", "log_statement=all", "-c", "log_min_duration_statement=0"]
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U boarduser -d boarddb"]
       interval: 5s

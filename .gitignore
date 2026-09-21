@@ -9,6 +9,10 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 *.log
 
+# 환경변수 (계정 정보)
+.env
+.env.example
+
 # IDE
 .idea/
 *.iml
